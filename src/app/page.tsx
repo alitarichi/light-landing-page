@@ -1,9 +1,5 @@
-import Image from "next/image";
+import { Header } from "@/sections/Header";
 
 export default function Home() {
-  return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
-  );
+  return <Header />;
 }
