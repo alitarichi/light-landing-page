@@ -1,3 +1,3 @@
 export const LogoTicker = () => {
-  return null;
+  return <div>LogoTicker</div>;
 };
