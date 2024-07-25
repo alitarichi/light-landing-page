@@ -24,7 +24,7 @@ export const ProductShowcase = () => {
           <Image
             src={pyramidImage}
             alt="pyramid image"
-            className="absolute -right-36 -top-32"
+            className="hidden md:block absolute -right-36 -top-32"
             height={262}
             width={262}
           />
@@ -32,7 +32,7 @@ export const ProductShowcase = () => {
             src={tubeImage}
             alt="tube image"
             height={248}
-            className="absolute bottom-24 -left-36"
+            className=" hidden md:block absolute bottom-24 -left-36"
           />
         </div>
       </div>
