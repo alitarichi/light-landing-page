@@ -52,13 +52,33 @@ const pricingTiers = [
 
 export const Pricing = () => {
   return (
-    <section>
+    <section className="py-24">
       <div>
-        <h2 className="section-title mt-5">Pricing</h2>
+        <h2 className="section-title  ">Pricing</h2>
         <p className="section-description mt-5">
           Free Forever. Upgrade for unlimited tasks, better security, and
           exclusive features.
         </p>
+        <div>
+          {pricingTiers.map(
+            ({
+              title,
+              monthlyPrice,
+              buttonText,
+              popular,
+              inverse,
+              features,
+            }) => (
+              <div>
+                <h3>{title}</h3>
+                <div>
+                  <span>${monthlyPrice}</span>
+                  <span>/month</span>
+                </div>
+              </div>
+            )
+          )}
+        </div>
       </div>
     </section>
   );
