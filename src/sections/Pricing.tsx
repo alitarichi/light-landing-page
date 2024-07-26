@@ -74,6 +74,12 @@ export const Pricing = () => {
                 <div>
                   <span>${monthlyPrice}</span>
                   <span>/month</span>
+                  <button>{buttonText}</button>
+                  <ul>
+                    {features.map((feature) => (
+                      <li>{feature}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             )
