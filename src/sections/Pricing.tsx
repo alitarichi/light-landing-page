@@ -1,4 +1,5 @@
 import CheckIcon from "@/assets/check.svg";
+import { twMerge } from "tailwind-merge";
 
 const pricingTiers = [
   {
@@ -74,11 +75,13 @@ export const Pricing = () => {
               <div className="p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA]">
                 <div className="flex justify-between">
                   <h3 className="text-lg font-bold text-black/50">{title}</h3>
-                  <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
-                    <span className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3EFFFF,#DD7DDF)] text-transparent bg-clip-text font-medium">
-                      Popular
-                    </span>
-                  </div>
+                  {popular === true && (
+                    <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
+                      <span className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3EFFFF,#DD7DDF)] text-transparent bg-clip-text font-medium">
+                        Popular
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <div className="flex items-baseline gap-1 mt-[30px]">
                   <span className="text-4xl font-bold tracking-tighter leading-none">
