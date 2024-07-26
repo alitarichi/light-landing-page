@@ -1,3 +1,5 @@
+import CheckIcon from "@/assets/check.svg";
+
 const pricingTiers = [
   {
     title: "Free",
@@ -69,18 +71,34 @@ export const Pricing = () => {
               inverse,
               features,
             }) => (
-              <div>
-                <h3>{title}</h3>
-                <div>
-                  <span>${monthlyPrice}</span>
-                  <span>/month</span>
-                  <button>{buttonText}</button>
-                  <ul>
-                    {features.map((feature) => (
-                      <li>{feature}</li>
-                    ))}
-                  </ul>
+              <div className="p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA]">
+                <div className="flex justify-between">
+                  <h3 className="text-lg font-bold text-black/50">{title}</h3>
+                  <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
+                    <span className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3EFFFF,#DD7DDF)] text-transparent bg-clip-text font-medium">
+                      Popular
+                    </span>
+                  </div>
                 </div>
+                <div className="flex items-baseline gap-1 mt-[30px]">
+                  <span className="text-4xl font-bold tracking-tighter leading-none">
+                    ${monthlyPrice}
+                  </span>
+                  <span className="tracking-tight font-bold text-black/50">
+                    /month
+                  </span>
+                </div>
+                <button className="btn btn-primary w-full mt-[30px]">
+                  {buttonText}
+                </button>
+                <ul className="flex flex-col gap-5 mt-8">
+                  {features.map((feature) => (
+                    <li className="text-sm flex items-center gap-4">
+                      <CheckIcon className="w-6 h-6" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )
           )}
