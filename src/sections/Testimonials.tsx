@@ -7,6 +7,7 @@ import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -73,7 +74,7 @@ export const Testimonials = () => {
   return (
     <section className="bg-white">
       <div className="container">
-        <div className="flex justify-center">
+        <div className="flex justify-center pt-5">
           <div className="tag">Testimonials</div>
         </div>
         <h2 className="section-title mt-5">What our users say</h2>
@@ -83,7 +84,22 @@ export const Testimonials = () => {
         </p>
         <div>
           {firstColumn.map(({ text, imageSrc, name, username }) => (
-            <div></div>
+            <div className="card">
+              <div>{text}</div>
+              <div className="flex items-center gap-2 mt-5">
+                <Image
+                  src={imageSrc}
+                  alt={name}
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+                <div className="flex flex-col">
+                  <div>{name}</div>
+                  <div>{username}</div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
