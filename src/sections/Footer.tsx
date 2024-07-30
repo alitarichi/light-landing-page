@@ -19,7 +19,7 @@ export const Footer = () => {
             className="relative"
           />
         </div>
-        <nav className="flex flex-col gap-6 mt-6">
+        <nav className="flex flex-col gap-6 mt-6 md:flex-row md:justify-center">
           <a href="#">About</a>
           <a href="#">Features</a>
           <a href="#">Customers</a>
